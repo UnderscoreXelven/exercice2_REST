@@ -20,7 +20,7 @@ public class MovieReceiveDTO {
     private long duration;
     private String genre;
     private String releaseDate;
-    private Director director;
+    private int directorId;
 
     public Movie dtoToEntity(){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -29,8 +29,8 @@ public class MovieReceiveDTO {
                 .description(this.getDescription())
                 .duration(this.getDuration())
                 .genre(this.getGenre())
-                .director(this.getDirector())
                 .releaseDate(LocalDate.parse(this.getReleaseDate(), dateTimeFormatter))
+                .director(Director.builder().directorId(this.getDirectorId()).build())
                 .build();
     }
 }

@@ -35,6 +35,7 @@ public class Movie {
                 .description(this.getDescription())
                 .duration(this.getDuration())
                 .genre(this.getGenre())
+                .directorId(this.getDirector().getDirectorId())
                 .build();
     }
 }

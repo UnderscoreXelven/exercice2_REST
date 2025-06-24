@@ -17,5 +17,5 @@ public class DirectorResponseDTO {
     private String firstName;
     private String lastName;
     private String birthDate;
-    private List<MovieResponseDTO> movies;
+    private List<Integer> movies;
 }

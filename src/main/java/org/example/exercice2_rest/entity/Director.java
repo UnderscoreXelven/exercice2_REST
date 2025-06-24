@@ -31,6 +31,7 @@ public class Director {
                 .firstName(this.getFirstName())
                 .lastName(this.getLastName())
                 .birthDate(this.getBirthDate().toString())
+                .movies(this.getMovies().stream().map(Movie::getMovieId).toList())
                 .build();
     }
 }
