@@ -22,6 +22,7 @@ public class Director {
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
+    private String nationality;
     @OneToMany(mappedBy = "director")
     private List<Movie> movies;
 
@@ -30,6 +31,7 @@ public class Director {
                 .directorId(this.getDirectorId())
                 .firstName(this.getFirstName())
                 .lastName(this.getLastName())
+                .nationality(this.getNationality())
                 .birthDate(this.getBirthDate().toString())
                 .movies(this.getMovies().stream().map(Movie::getMovieId).toList())
                 .build();

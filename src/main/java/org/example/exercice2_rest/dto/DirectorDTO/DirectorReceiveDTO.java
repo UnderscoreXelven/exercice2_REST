@@ -17,6 +17,7 @@ public class DirectorReceiveDTO {
     private String firstName;
     private String lastName;
     private String birthDate;
+    private String nationality;
 
     public Director dtoToEntity(){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -24,6 +25,7 @@ public class DirectorReceiveDTO {
                 firstName(this.getFirstName())
                 .birthDate(LocalDate.parse(this.getBirthDate(), dateTimeFormatter))
                 .lastName(this.getLastName())
+                .nationality(this.getNationality())
                 .build();
     }
 }
